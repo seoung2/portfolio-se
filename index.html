@@ -7,105 +7,70 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="page">
+  <div class="page">
 
-    <!-- 흰 큰 카드 -->
-    <section class="sheet">
-
-      <!-- 왼쪽: ABOUT ME -->
-      <aside class="about">
-        <p class="label">ABOUT ME</p>
+    <section class="card main-card">
+      <aside class="about" id="about">
+        <p class="about-label">ABOUT ME</p>
         <div class="photo" id="photo"></div>
-        <h1 class="name" id="name"></h1>
-        <p class="job" id="title"></p>
-        <p class="badge" id="badge"></p>
-
-        <ul class="contacts">
-          <li>
-            <span class="dot-icon">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
-            </span>
-            <span id="c-name"></span>
-          </li>
-          <li>
-            <span class="dot-icon">
-              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-            </span>
-            <span id="c-email"></span>
-          </li>
-          <li>
-            <span class="dot-icon">
-              <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
-            </span>
-            <span id="c-phone"></span>
-          </li>
-          <li>
-            <span class="dot-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
-            </span>
-            <span id="c-location"></span>
-          </li>
-        </ul>
+        <h2 class="name" id="name"></h2>
+        <p class="title" id="title"></p>
+        <p class="badge-wrap"><span class="badge" id="badge"></span></p>
+        <ul class="contacts" id="contacts"></ul>
       </aside>
 
-      <!-- 오른쪽: PORTFOLIO -->
-      <div class="content">
-        <h2 class="big-title">PORTFOLIO</h2>
+      <main class="portfolio">
+        <h1 class="page-title"><span class="bar"></span>PORTFOLIO</h1>
         <p class="headline" id="headline"></p>
         <p class="intro" id="intro"></p>
+        <hr class="divider">
 
-        <div class="info">
-          <div class="info-box">
-            <h3>
-              <svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg>
-              EDUCATION
-            </h3>
-            <p id="education"></p>
-          </div>
-          <div class="info-box">
-            <h3>
-              <svg viewBox="0 0 24 24"><path d="M14 6a4 4 0 0 0 5 5l-9 9a2 2 0 0 1-3-3l9-9a4 4 0 0 0-2-2z"/></svg>
-              SKILLS &amp; TOOLS
-            </h3>
-            <p id="skills"></p>
-          </div>
-          <div class="info-box">
-            <h3>
-              <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>
-              EXPERIENCE
-            </h3>
-            <p id="experience"></p>
-          </div>
+        <div class="info-grid">
+          <section>
+            <h3 class="info-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm-6 9.2v4L12 20l6-3.8v-4L12 15.5 6 12.2z"/></svg>EDUCATION</h3>
+            <div class="info-body" id="education"></div>
+          </section>
+          <section>
+            <h3 class="info-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.7 5.8 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></svg>SKILLS &amp; TOOLS</h3>
+            <div class="info-body" id="skills"></div>
+          </section>
+          <section>
+            <h3 class="info-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v4H2V8a2 2 0 0 1 2-2h4V5a2 2 0 0 1 2-2zm0 2v1h4V5h-4zM2 14h8v2h4v-2h8v5a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5z"/></svg>EXPERIENCE</h3>
+            <div class="info-body" id="experience"></div>
+          </section>
         </div>
 
-        <div class="highlights">
-          <h3 class="section-title">PORTFOLIO HIGHLIGHTS</h3>
-          <div class="cards" id="cards">
-            <p class="note">불러오는 중…</p>
+        <section class="highlights">
+          <div class="highlights-head">
+            <h3>PORTFOLIO HIGHLIGHTS</h3>
+            <span class="hint">(카드를 터치하면 상세 기획서를 보실 수 있습니다)</span>
           </div>
-        </div>
+          <div class="project-grid" id="projects"><p class="status">불러오는 중…</p></div>
+        </section>
 
-        <blockquote class="quote" id="quote"></blockquote>
+        <p class="quote" id="quote"></p>
+      </main>
+    </section>
+
+    <section class="card guestbook">
+      <div class="guestbook-inner">
+        <h2 class="guestbook-title"><span class="bar"></span>GUESTBOOK</h2>
+        <p class="guestbook-sub">방문해 주셔서 감사합니다. 별명과 한마디를 남겨 주세요.</p>
+
+        <div class="guest-form">
+          <input type="text" id="gb-nickname" maxlength="20" placeholder="별명 (20자까지)" aria-label="별명">
+          <input type="text" id="gb-message" maxlength="200" placeholder="한마디 (200자까지)" aria-label="한마디">
+          <button type="button" id="gb-submit" class="primary-btn">남기기</button>
+        </div>
+        <p class="form-msg" id="gb-msg" role="status"></p>
+
+        <ul class="guest-list" id="gb-list"></ul>
       </div>
     </section>
 
-    <!-- 방명록 -->
-    <section class="sheet guestbook">
-      <h2 class="big-title">GUESTBOOK</h2>
-      <p class="intro">별명과 한마디를 남겨 주세요.</p>
+    <p class="admin-link"><a href="admin.html">관리자</a></p>
 
-      <div class="gb-form">
-        <input type="text" id="gb-nickname" maxlength="20" placeholder="별명 (20자까지)">
-        <input type="text" id="gb-message" maxlength="200" placeholder="한마디 (200자까지)">
-        <button type="button" id="gb-submit">남기기</button>
-      </div>
-      <p class="note" id="gb-status"></p>
-
-      <ul class="gb-list" id="gb-list"></ul>
-    </section>
-
-  </main>
-
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
